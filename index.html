@@ -128,8 +128,8 @@
 
         <!-- Age Verification Buttons -->
         <div id="verification-section" class="btn-group">
-            <button class="btn-yes" onclick="verifyAge(true)">I am 18 or older</button>
-            <button class="btn-no" onclick="verifyAge(false)">I am under 18</button>
+            <button class="btn-yes" onclick="verifyAge(true)">Je suis 18 ans ou plus <br> I am 18 or older</button>
+            <button class="btn-no" onclick="verifyAge(false)">Je suis sous 18 ans <br> I am under 18</button>
         </div>
 
         <!-- Hidden section that appears after clicking a button -->
@@ -148,13 +148,16 @@
                 // Show the study link if they are 18 or older
                 // Replace 'YOUR_LINK_HERE' with the actual URL to your survey/study
                 resultSection.innerHTML = `
-                    <p style="color: #28a745;">Thank you for confirming. You may proceed to the study.</p>
-                    <a href="https://calendly.com/maxwell-gentili-morin-etsmtl/30min" class="study-link" target="_blank" rel="noopener noreferrer">Go to Study</a>
+                    <p style="color: #28a745;">Merci de votre confirmation. Vous pouvez procéder à la prise de rendez-vous pour l'étude.<br> 
+                        Thank you for confirming. You may proceed to schedule a time for the study.</p>
+                    <a href="https://calendly.com/maxwell-gentili-morin-etsmtl/30min" class="study-link" target="_blank" rel="noopener noreferrer">Rendez-vous</a>
                 `;
             } else {
                 // Show an error message if they are under 18
                 resultSection.innerHTML = `
-                    <p style="color: #dc3545;">We're sorry, but you must be at least 18 years old to participate in this study. Thank you for your interest.</p>
+                    <p style="color: #dc3545;">Nous sommes désolés, mais vous devez avoir au moins 18 ans pour participer à cette étude. Merci de votre intérêt.<br>
+                        We're sorry, but you must be at least 18 years old to participate in this study. Thank you for your interest.
+                        </p>
                 `;
             }
         }
